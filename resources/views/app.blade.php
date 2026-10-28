@@ -30,14 +30,78 @@
             }
         </style>
 
+        {{-- Self-hosted fonts (DM Serif Display, Inter, Space Grotesk) — no external font CDN --}}
+        <style>
+            @font-face {
+                font-family: 'DM Serif Display';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url('/fonts/dm-serif-display-400-normal.woff2') format('woff2');
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url('/fonts/inter-400-normal.woff2') format('woff2');
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url('/fonts/inter-500-normal.woff2') format('woff2');
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url('/fonts/inter-600-normal.woff2') format('woff2');
+            }
+            @font-face {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: url('/fonts/inter-700-normal.woff2') format('woff2');
+            }
+            @font-face {
+                font-family: 'Space Grotesk';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url('/fonts/space-grotesk-400-normal.woff2') format('woff2');
+            }
+            @font-face {
+                font-family: 'Space Grotesk';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url('/fonts/space-grotesk-500-normal.woff2') format('woff2');
+            }
+            @font-face {
+                font-family: 'Space Grotesk';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url('/fonts/space-grotesk-600-normal.woff2') format('woff2');
+            }
+            @font-face {
+                font-family: 'Space Grotesk';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: url('/fonts/space-grotesk-700-normal.woff2') format('woff2');
+            }
+        </style>
+
         <title inertia>{{ config('app.name', 'InspireWrite') }}</title>
 
         <link rel="icon" href="/text.ico" sizes="any">
         <link rel="icon" href="/text.svg" type="image/svg+xml">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=dm-serif-display:400|inter:400,500,600,700|space-grotesk:400,500,600,700" rel="stylesheet" />
 
         @viteReactRefresh
         @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
