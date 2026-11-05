@@ -16,6 +16,8 @@ export default function HowToPray() {
         <BibleLayout>
             <Head title="How to Pray When You Feel Stuck | InspireWrite">
                 <meta name="description" content="Feeling spiritually dry? Learn practical strategies to revitalize your prayer life and reconnect with God." />
+                <meta name="ai-summary" content="Feeling spiritually dry? Learn practical strategies to revitalize your prayer life and reconnect with God." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/guides/how-to-pray-when-you-feel-stuck.md" />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
 
@@ -24,7 +26,7 @@ export default function HowToPray() {
                     <div className="flex items-center gap-2 text-yellow-600 text-sm uppercase tracking-widest mb-4">
                         <Heart size={16} /><span>Spiritual Guide</span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         How to Pray When You Feel <span className="text-yellow-500">Stuck</span>
                     </h1>
                     <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
@@ -45,7 +47,7 @@ export default function HowToPray() {
             <section className="py-16 px-6 md:px-12 bg-white">
                 <div className="max-w-4xl mx-auto space-y-16">
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center">1</span>
                             Start with Radical Honesty
                         </h2>
@@ -59,7 +61,7 @@ export default function HowToPray() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center">2</span>
                             Use Scripture as Your Script
                         </h2>
@@ -77,7 +79,7 @@ export default function HowToPray() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center">3</span>
                             Try the ACTS Framework
                         </h2>
@@ -97,7 +99,7 @@ export default function HowToPray() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center">4</span>
                             Change Your Posture or Location
                         </h2>
@@ -111,20 +113,20 @@ export default function HowToPray() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center">5</span>
                             Embrace Silence
                         </h2>
                         <div className="bg-[#1a1a1a] text-white p-6">
                             <Quote className="text-yellow-500 mb-3" size={28} />
-                            <p className="italic text-lg" style={{ fontFamily: 'DM Serif Display, serif' }}>"Be still, and know that I am God."</p>
+                            <p className="italic text-lg" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>"Be still, and know that I am God."</p>
                             <p className="text-gray-400 text-sm mt-2">— Psalm 46:10</p>
                         </div>
                         <p className="text-gray-700 leading-relaxed mt-4">Set a timer for 5 minutes. Sit in silence. Just be present with God. This contemplative practice has transformed prayer for millions throughout history.</p>
                     </div>
 
                     <div className="bg-[#1a1a1a] text-white p-10 text-center">
-                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>Let Scripture Guide Your Prayers</h2>
+                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>Let Scripture Guide Your Prayers</h2>
                         <p className="text-gray-300 mb-8">When words fail, let God's Word speak.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/bible/ps/23" className="inline-flex items-center justify-center gap-2 bg-yellow-500 px-8 py-4 text-sm uppercase tracking-widest hover:bg-yellow-600">

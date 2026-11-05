@@ -32,6 +32,14 @@ return Application::configure(basePath: dirname(__DIR__))
             HandleInertiaRequests::class,
             AddLinkHeadersForPreloadedAssets::class,
         ]);
+
+        // PreferMarkdown runs FIRST globally (before TrustProxies/HandleCors
+        // and the Inertia middleware) so that, on the way back out, its
+        // response fix-ups run LAST: Inertia replaces Vary with X-Inertia
+        // and HandleCors appends Origin, which would otherwise clobber the
+        // markdown Vary: Accept header. Its early return only fires for
+        // public GET pages that prefer markdown, so nothing else is touched.
+        $middleware->prepend(\App\Http\Middleware\PreferMarkdown::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->respond(function (Response $response, Throwable $exception, Request $request) {

@@ -7,13 +7,15 @@ export default function Terms() {
         <BibleLayout>
             <Head title="Terms of Use - InspireWrite by Glenride">
                 <meta name="description" content="InspireWrite terms of use. Understand your rights and responsibilities when using our Bible reading and spiritual journaling platform." />
+                <meta name="ai-summary" content="InspireWrite terms of use. Understand your rights and responsibilities when using our Bible reading and spiritual journaling platform." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/terms.md" />
             </Head>
 
             {/* Hero */}
             <section className="py-16 px-6 md:px-12 bg-[#F5F2EA]">
                 <div className="max-w-4xl mx-auto">
                     <div className="flex items-center gap-4 mb-6">
-                        <h1 className="text-4xl font-bold uppercase tracking-wider" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h1 className="text-4xl font-bold uppercase tracking-wider" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             TERMS OF USE.
                         </h1>
                         <div className="h-px bg-black/20 flex-1" />

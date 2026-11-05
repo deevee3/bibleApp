@@ -16,6 +16,8 @@ export default function SpiritualJourney() {
         <BibleLayout>
             <Head title="How to Begin a Spiritual Journey | InspireWrite">
                 <meta name="description" content="First steps for seekers and those returning to faith. A practical guide to starting or deepening your spiritual life." />
+                <meta name="ai-summary" content="First steps for seekers and those returning to faith. A practical guide to starting or deepening your spiritual life." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/guides/how-to-begin-a-spiritual-journey.md" />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
 
@@ -24,7 +26,7 @@ export default function SpiritualJourney() {
                     <div className="flex items-center gap-2 text-yellow-600 text-sm uppercase tracking-widest mb-4">
                         <Compass size={16} /><span>Spiritual Guide</span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         How to Begin a <span className="text-yellow-500">Spiritual Journey</span>
                     </h1>
                     <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
@@ -45,7 +47,7 @@ export default function SpiritualJourney() {
             <section className="py-16 px-6 md:px-12 bg-white">
                 <div className="max-w-4xl mx-auto space-y-16">
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center">1</span>
                             What Is a Spiritual Journey?
                         </h2>
@@ -58,7 +60,7 @@ export default function SpiritualJourney() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center">2</span>
                             Start with Scripture
                         </h2>
@@ -79,7 +81,7 @@ export default function SpiritualJourney() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center">3</span>
                             Learn to Pray
                         </h2>
@@ -92,7 +94,7 @@ export default function SpiritualJourney() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center">4</span>
                             Find Community
                         </h2>
@@ -106,7 +108,7 @@ export default function SpiritualJourney() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center">5</span>
                             Build Spiritual Habits
                         </h2>
@@ -136,7 +138,7 @@ export default function SpiritualJourney() {
                     </div>
 
                     <div className="bg-[#1a1a1a] text-white p-10 text-center">
-                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>Start Your Journey Today</h2>
+                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>Start Your Journey Today</h2>
                         <p className="text-gray-300 mb-8">InspireWrite is designed to support your spiritual growth every step of the way.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/bible/jn/1" className="inline-flex items-center justify-center gap-2 bg-yellow-500 px-8 py-4 text-sm uppercase tracking-widest hover:bg-yellow-600">

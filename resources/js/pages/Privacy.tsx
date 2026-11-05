@@ -7,13 +7,15 @@ export default function Privacy() {
         <BibleLayout>
             <Head title="Privacy Policy - InspireWrite by Glenride">
                 <meta name="description" content="InspireWrite privacy policy. Learn how we collect, use, and protect your personal data. Your privacy and security are our priority." />
+                <meta name="ai-summary" content="InspireWrite privacy policy. Learn how we collect, use, and protect your personal data. Your privacy and security are our priority." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/privacy.md" />
             </Head>
 
             {/* Hero */}
             <section className="py-16 px-6 md:px-12 bg-[#F5F2EA]">
                 <div className="max-w-4xl mx-auto">
                     <div className="flex items-center gap-4 mb-6">
-                        <h1 className="text-4xl font-bold uppercase tracking-wider" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h1 className="text-4xl font-bold uppercase tracking-wider" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             PRIVACY POLICY.
                         </h1>
                         <div className="h-px bg-black/20 flex-1" />

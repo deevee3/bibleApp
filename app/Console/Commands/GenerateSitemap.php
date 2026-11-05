@@ -34,7 +34,39 @@ class GenerateSitemap extends Command
         $sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
         // Home
-        $sitemap .= $this->addUrl($baseUrl . '/', 'daily', '1.0');
+        $sitemap .= $this->addUrl($baseUrl.'/', 'daily', '1.0');
+
+        // Static public pages + research. lastmod is the source file's
+        // modification date (when the data/page last changed), never "now".
+        // Markdown (.md) URLs are deliberately left OUT of the sitemap:
+        // they are noindex alternates, and the HTML page stays canonical.
+        $staticPages = [
+            '/about' => 'resources/js/pages/About.tsx',
+            '/pricing' => 'resources/js/pages/Pricing.tsx',
+            '/contact' => 'resources/js/pages/Contact.tsx',
+            '/privacy' => 'resources/js/pages/Privacy.tsx',
+            '/terms' => 'resources/js/pages/Terms.tsx',
+            '/faq' => 'resources/js/pages/FAQ.tsx',
+            '/for-llms' => 'resources/js/pages/ForLlms.tsx',
+            '/guides/how-to-read-the-bible' => 'resources/js/pages/guides/HowToReadBible.tsx',
+            '/guides/how-to-pray-when-you-feel-stuck' => 'resources/js/pages/guides/HowToPray.tsx',
+            '/guides/how-to-begin-a-spiritual-journey' => 'resources/js/pages/guides/SpiritualJourney.tsx',
+            '/guides/how-to-use-ai-for-bible-study' => 'resources/js/pages/guides/AIBibleStudy.tsx',
+            '/resources/best-bible-reading-plans' => 'resources/js/pages/resources/BibleReadingPlans.tsx',
+            '/resources/journaling-prompts-for-spiritual-growth' => 'resources/js/pages/resources/JournalingPrompts.tsx',
+            '/bible' => 'resources/js/pages/Bible/Index.tsx',
+            '/research' => 'resources/js/pages/Research/Index.tsx',
+            '/research/bible-coverage' => 'resources/js/pages/Research/BibleCoverage.tsx',
+        ];
+
+        foreach ($staticPages as $path => $source) {
+            $sitemap .= $this->addUrl(
+                $baseUrl.$path,
+                'weekly',
+                str_starts_with($path, '/research') ? '0.8' : '0.6',
+                $this->lastModified($source)
+            );
+        }
 
         // Bible Chapters, for every imported version.
         // The default version (KJV) keeps the canonical unprefixed URLs;
@@ -49,13 +81,14 @@ class GenerateSitemap extends Command
 
             $prefix = $slug === 'kjv' ? '' : '/' . $slug;
             $books = $version->books()->with('chapters')->get();
+            $chapterLastmod = $this->lastModified("bible/json/{$abbreviation}.json");
 
             foreach ($books as $book) {
                 // Book Index (if exists) or just chapters
-                $sitemap .= $this->addUrl($baseUrl . "/bible{$prefix}/{$book->abbreviation}", 'weekly', '0.8');
+                $sitemap .= $this->addUrl($baseUrl . "/bible{$prefix}/{$book->abbreviation}", 'weekly', '0.8', $chapterLastmod);
 
                 foreach ($book->chapters as $chapter) {
-                    $sitemap .= $this->addUrl($baseUrl . "/bible{$prefix}/{$book->abbreviation}/{$chapter->number}", 'monthly', '0.7');
+                    $sitemap .= $this->addUrl($baseUrl . "/bible{$prefix}/{$book->abbreviation}/{$chapter->number}", 'monthly', '0.7', $chapterLastmod);
                 }
             }
         }
@@ -67,13 +100,23 @@ class GenerateSitemap extends Command
         $this->info('Sitemap generated successfully at public/sitemap.xml');
     }
 
-    private function addUrl($loc, $freq, $priority)
+    private function addUrl($loc, $freq, $priority, ?string $lastmod = null)
     {
+        $lastmodXml = $lastmod ? "\n        <lastmod>{$lastmod}</lastmod>" : '';
+
         return "
     <url>
-        <loc>{$loc}</loc>
+        <loc>{$loc}</loc>{$lastmodXml}
         <changefreq>{$freq}</changefreq>
         <priority>{$priority}</priority>
     </url>";
+    }
+
+    /** Last-modified date of a source file (Y-m-d), or null if absent. */
+    private function lastModified(string $relativePath): ?string
+    {
+        $full = base_path($relativePath);
+
+        return File::exists($full) ? date('Y-m-d', File::lastModified($full)) : null;
     }
 }

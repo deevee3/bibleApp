@@ -17,7 +17,11 @@ export default function Index({ version, books }: Props) {
 
     return (
         <BibleLayout>
-            <Head title="Home" />
+            <Head title="Bible Index — Read the Bible Online | InspireWrite">
+                <meta name="description" content="Read the Bible online free in the King James Version: all 66 books, 1,189 chapters." />
+                <meta name="ai-summary" content="Read the Bible online free in the King James Version: all 66 books, 1,189 chapters." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/bible.md" />
+            </Head>
             
             {/* Hero Section */}
             <section className="relative py-20 px-4 md:px-12 flex flex-col items-center text-center">
@@ -34,6 +38,18 @@ export default function Index({ version, books }: Props) {
                     <button className="bg-[#EAB308] text-white px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-[#CA9A04] transition-colors shadow-lg">
                         Start Reading
                     </button>
+                </div>
+
+                {/* At a glance — counts from the books sent with this page */}
+                <div className="relative z-10 max-w-2xl mx-auto mt-10 grid grid-cols-3 gap-4 text-center">
+                    <div><div className="font-serif text-3xl font-bold">{books.length}</div><div className="text-xs uppercase tracking-widest text-muted-foreground">Books</div></div>
+                    <div><div className="font-serif text-3xl font-bold">{books.reduce((sum, b) => sum + (b.chapters_count ?? 0), 0).toLocaleString()}</div><div className="text-xs uppercase tracking-widest text-muted-foreground">Chapters</div></div>
+                    <div><div className="font-serif text-3xl font-bold">{version.name}</div><div className="text-xs uppercase tracking-widest text-muted-foreground">Translation</div></div>
+                </div>
+                <p className="relative z-10 max-w-2xl mx-auto mt-4 text-sm text-muted-foreground">
+                    Also available in the Bible in Basic English. See the counted coverage in the{' '}
+                    <Link href="/research/bible-coverage" className="underline">Bible Coverage Statistics 2026</Link>.
+                </p>
                 </div>
                 
                 {/* Decorative elements resembling the book cover leaves/lines */}

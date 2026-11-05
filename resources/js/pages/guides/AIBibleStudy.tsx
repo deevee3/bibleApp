@@ -16,6 +16,8 @@ export default function AIBibleStudy() {
         <BibleLayout>
             <Head title="How to Study with the Assistant | InspireWrite">
                 <meta name="description" content="A guide to using the Assistant responsibly for Bible study, sermon preparation, and spiritual growth." />
+                <meta name="ai-summary" content="A guide to using the Assistant responsibly for Bible study, sermon preparation, and spiritual growth." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/guides/how-to-use-ai-for-bible-study.md" />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
 
@@ -24,7 +26,7 @@ export default function AIBibleStudy() {
                     <div className="flex items-center gap-2 text-yellow-600 text-sm uppercase tracking-widest mb-4">
                         <Sparkles size={16} /><span>Guide</span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         How to Study with the <span className="text-yellow-500">Assistant</span>
                     </h1>
                     <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
@@ -45,7 +47,7 @@ export default function AIBibleStudy() {
             <section className="py-16 px-6 md:px-12 bg-white">
                 <div className="max-w-4xl mx-auto space-y-16">
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-[#1a1a1a] font-bold flex items-center justify-center">1</span>
                             What the Assistant Can Do for Bible Study
                         </h2>
@@ -67,7 +69,7 @@ export default function AIBibleStudy() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-[#1a1a1a] font-bold flex items-center justify-center">2</span>
                             What the Assistant Cannot Replace
                         </h2>
@@ -89,7 +91,7 @@ export default function AIBibleStudy() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-[#1a1a1a] font-bold flex items-center justify-center">3</span>
                             How InspireWrite Uses the Assistant Responsibly
                         </h2>
@@ -103,7 +105,7 @@ export default function AIBibleStudy() {
                     </div>
 
                     <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-[#1a1a1a] font-bold flex items-center justify-center">4</span>
                             Best Practices for Assisted Study
                         </h2>
@@ -128,7 +130,7 @@ export default function AIBibleStudy() {
                     </div>
 
                     <div className="bg-[#1a1a1a] text-white p-10 text-center">
-                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>Try Bible Study with the Assistant</h2>
+                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>Try Bible Study with the Assistant</h2>
                         <p className="text-gray-300 mb-8">Experience how InspireWrite's Assistant can support your sermon preparation and study.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/bible/jn/1" className="inline-flex items-center justify-center gap-2 bg-yellow-500 text-[#1a1a1a] font-semibold px-8 py-4 text-sm uppercase tracking-widest hover:bg-yellow-400 transition-colors">

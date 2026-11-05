@@ -9,7 +9,10 @@ use App\Http\Controllers\BibleSearchController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LessonController;
+use App\Http\Controllers\LlmsController;
+use App\Http\Controllers\MarkdownController;
 use App\Http\Controllers\ReferralController;
+use App\Http\Controllers\ResearchController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SermonController;
 use App\Models\BibleVersion;
@@ -21,7 +24,7 @@ Route::get('/', [BibleController::class, 'index'])->name('home');
 
 // Public referral-link entry point: /r/{code} -> records click, sets the
 // attribution cookie, redirects to registration.
-Route::get('/r/{code}', [ReferralController::class, 'redirect'])->name('affiliate.redirect');
+Route::get('/r/{code}', [ReferralController::class, 'redirect'])->where('code', '[A-Z0-9]+')->name('affiliate.redirect');
 Route::get('/about', function () { return Inertia::render('About'); })->name('about');
 Route::get('/pricing', function () { return Inertia::render('Pricing'); })->name('pricing');
 Route::get('/for-llms', function () { return Inertia::render('ForLlms'); })->name('for-llms');
@@ -51,14 +54,35 @@ Route::get('/bible', [BibleController::class, 'bibleIndex'])->name('bible.index'
 // canonical KJV URLs and must never redirect.
 Route::get('/bible/{version}/{book}/{chapter?}', [BibleController::class, 'showVersioned'])
     ->where('version', implode('|', array_keys(BibleVersion::VERSION_SLUGS)))
+    ->whereNumber('chapter')
     ->name('bible.version.chapter');
 
-Route::get('/bible/{book}/{chapter?}', [BibleController::class, 'show'])->name('bible.chapter');
+Route::get('/bible/{book}/{chapter?}', [BibleController::class, 'show'])->whereNumber('chapter')->name('bible.chapter');
 
-Route::get('/shared/{token}', [SermonController::class, 'shared'])->name('sermons.shared');
+Route::get('/shared/{token}', [SermonController::class, 'shared'])->where('token', '[A-Za-z0-9]+')->name('sermons.shared');
+
+// ---------------------------------------------------------------------------
+// AI-readable site (ScrollLaunch Prompt 1) + citation research (Prompt 2).
+// Generated-from-code discovery files replace the old hand-written static
+// public/llms.txt and public/robots.txt, which are deleted so these routes
+// are what actually serves. Markdown versions live at /{path}.md and via
+// Accept: text/markdown (see PreferMarkdown middleware); /api/md/* is the
+// explicit debugging endpoint and catalog. Nothing here is committed or
+// deployed by the agent — review the diff first.
+// ---------------------------------------------------------------------------
+Route::get('/llms.txt', [LlmsController::class, 'llms'])->name('llms');
+Route::get('/llms-full.txt', [LlmsController::class, 'llmsFull'])->name('llms-full');
+Route::get('/ai.txt', [LlmsController::class, 'aiTxt'])->name('ai-txt');
+Route::get('/robots.txt', [LlmsController::class, 'robots'])->name('robots');
+
+Route::get('/research', [ResearchController::class, 'index'])->name('research.index');
+Route::get('/research/bible-coverage', [ResearchController::class, 'bibleCoverage'])->name('research.bible-coverage');
+
+Route::get('/api/md/_catalog', [MarkdownController::class, 'catalog'])->name('md.catalog');
+Route::get('/api/md/{path}', [MarkdownController::class, 'api'])->where('path', '.*')->name('md.api');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/checkout/{plan}', [CheckoutController::class, 'subscribe'])->name('checkout');
+    Route::get('/checkout/{plan}', [CheckoutController::class, 'subscribe'])->where('plan', 'price_[A-Za-z0-9]+')->name('checkout');
 
     Route::get('/billing-portal', function () {
         return auth()->user()->redirectToBillingPortal(route('subscription.edit'));
@@ -123,3 +147,7 @@ Route::middleware(['auth', 'verified', 'is_admin'])->prefix('admin/affiliates')-
 });
 
 require __DIR__.'/settings.php';
+
+// Markdown versions of every public page: GET /{path}.md. Registered last
+// so no real route is shadowed; unknown paths get a markdown 404, never HTML.
+Route::get('{path}.md', [MarkdownController::class, 'show'])->where('path', '.*')->name('md.show');

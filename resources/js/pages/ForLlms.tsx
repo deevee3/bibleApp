@@ -46,6 +46,8 @@ export default function ForLlms() {
             <Head>
                 <title>InspireWrite by Glenride - S.C.R.I.P.T. Bible Reading & Spiritual Journaling</title>
                 <meta name="description" content="InspireWrite by Glenride helps believers read Scripture with the denomination-neutral S.C.R.I.P.T. method, journal reflections, and build lessons and sermons with the Assistant." />
+                <meta name="ai-summary" content="InspireWrite by Glenride helps believers read Scripture with the denomination-neutral S.C.R.I.P.T. method, journal reflections, and build lessons and sermons with the Assistant." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/for-llms.md" />
                 <meta name="robots" content="index, follow" />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
@@ -125,12 +127,26 @@ export default function ForLlms() {
                         </p>
                     </section>
 
+                    <section>
+                        <h2>Machine-readable files</h2>
+                        <ul>
+                            <li><a href="https://inspirewrite.online/llms.txt">llms.txt</a> — index of every public page, with markdown links.</li>
+                            <li><a href="https://inspirewrite.online/llms-full.txt">llms-full.txt</a> — the full content of the core pages.</li>
+                            <li><a href="https://inspirewrite.online/ai.txt">ai.txt</a> — AI usage policy: what may be summarised, quoted, and cited.</li>
+                            <li><a href="https://inspirewrite.online/api/md/_catalog">Markdown catalog</a> — every addressable markdown route.</li>
+                            <li><a href="https://inspirewrite.online/research/bible-coverage">Bible Coverage Statistics 2026</a> — counted Bible coverage statistics, with methodology.</li>
+                        </ul>
+                        <p>Every public page has a markdown version: add <code>.md</code> to the URL (for example, <a href="https://inspirewrite.online/about.md">/about.md</a>), or request the page with <code>Accept: text/markdown</code>.</p>
+                    </section>
+
                     <footer>
                         <h2>Links</h2>
                         <ul>
                             <li><a href="https://inspirewrite.online">Website: inspirewrite.online</a></li>
                             <li><a href="https://inspirewrite.online/bible/gn/1">Start Reading the Bible</a></li>
                             <li><a href="https://inspirewrite.online/pricing">View Pricing Plans</a></li>
+                            <li><a href="https://inspirewrite.online/llms.txt">llms.txt</a></li>
+                            <li><a href="https://inspirewrite.online/research/bible-coverage">Bible Coverage Statistics 2026</a></li>
                         </ul>
 
                         <h2>Citation</h2>

@@ -59,6 +59,8 @@ export default function BibleReadingPlans() {
         <BibleLayout>
             <Head title="Best Bible Reading Plans | InspireWrite">
                 <meta name="description" content="Discover the best Bible reading plans for new believers, busy professionals, and deep study. Find the perfect plan for your spiritual goals." />
+                <meta name="ai-summary" content="Discover the best Bible reading plans for new believers, busy professionals, and deep study. Find the perfect plan for your spiritual goals." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/resources/best-bible-reading-plans.md" />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
 
@@ -67,7 +69,7 @@ export default function BibleReadingPlans() {
                     <div className="flex items-center gap-2 text-yellow-600 text-sm uppercase tracking-widest mb-4">
                         <Calendar size={16} /><span>Resource Guide</span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         Best Bible Reading <span className="text-yellow-500">Plans</span>
                     </h1>
                     <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
@@ -83,7 +85,7 @@ export default function BibleReadingPlans() {
                             <div key={i} className={`p-8 border-l-4 border-${plan.color}-500 bg-${plan.color}-50/30 border border-gray-100`}>
                                 <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                                     <div>
-                                        <h2 className="text-2xl font-bold" style={{ fontFamily: 'DM Serif Display, serif' }}>{plan.name}</h2>
+                                        <h2 className="text-2xl font-bold" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>{plan.name}</h2>
                                         <p className="text-yellow-600 text-sm font-medium mt-1">Best for: {plan.bestFor}</p>
                                     </div>
                                     <div className="flex gap-4 text-sm text-gray-500">
@@ -97,7 +99,7 @@ export default function BibleReadingPlans() {
                     </div>
 
                     <div className="mt-16 p-8 bg-[#F5F2EA] border-l-4 border-yellow-500">
-                        <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>Tips for Success</h3>
+                        <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>Tips for Success</h3>
                         <ul className="space-y-3 text-gray-700">
                             <li className="flex gap-3"><CheckCircle className="text-yellow-500 shrink-0 mt-1" size={18} /><span><strong>Same time, same place</strong> — Anchor reading to an existing habit like morning coffee</span></li>
                             <li className="flex gap-3"><CheckCircle className="text-yellow-500 shrink-0 mt-1" size={18} /><span><strong>Start small</strong> — It's better to read 5 minutes daily than 30 minutes sporadically</span></li>
@@ -107,7 +109,7 @@ export default function BibleReadingPlans() {
                     </div>
 
                     <div className="mt-16 bg-[#1a1a1a] text-white p-10 text-center">
-                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>Start Reading Today</h2>
+                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>Start Reading Today</h2>
                         <p className="text-gray-300 mb-8">InspireWrite makes Bible reading beautiful and distraction-free.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/bible/jn/1" className="inline-flex items-center justify-center gap-2 bg-yellow-500 px-8 py-4 text-sm uppercase tracking-widest hover:bg-yellow-600">

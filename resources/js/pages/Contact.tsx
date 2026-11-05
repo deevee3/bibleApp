@@ -37,6 +37,8 @@ export default function Contact() {
         <BibleLayout>
             <Head title="Contact Us - InspireWrite by Glenride">
                 <meta name="description" content="Contact the InspireWrite team. We're here to help with questions, feedback, or partnership inquiries. Reach out to hello@inspirewrite.online." />
+                <meta name="ai-summary" content="Contact the InspireWrite team. We're here to help with questions, feedback, or partnership inquiries. Reach out to hello@inspirewrite.online." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/contact.md" />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
 
@@ -44,7 +46,7 @@ export default function Contact() {
             <section className="py-20 px-6 md:px-12 bg-[#F5F2EA]">
                 <div className="max-w-4xl mx-auto">
                     <div className="flex items-center gap-4 mb-8">
-                        <h1 className="text-5xl font-bold uppercase tracking-wider" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h1 className="text-5xl font-bold uppercase tracking-wider" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             CONT<span className="text-yellow-500">ACT</span> US.
                         </h1>
                         <div className="h-px bg-black/20 flex-1" />
@@ -61,7 +63,7 @@ export default function Contact() {
                 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
                     {/* Contact Information */}
                     <div>
-                        <h2 className="text-2xl font-bold uppercase tracking-wider mb-6" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold uppercase tracking-wider mb-6" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             Get in <span className="text-yellow-500">Touch</span>
                         </h2>
 
@@ -117,7 +119,7 @@ export default function Contact() {
 
                     {/* Contact Form */}
                     <div>
-                        <h2 className="text-2xl font-bold uppercase tracking-wider mb-6" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold uppercase tracking-wider mb-6" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             Send a <span className="text-yellow-500">Message</span>
                         </h2>
 
@@ -215,7 +217,7 @@ export default function Contact() {
             {/* FAQ CTA */}
             <section className="py-12 px-6 md:px-12 bg-[#F5F2EA]">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         Looking for Quick Answers?
                     </h3>
                     <p className="text-gray-600 mb-6">

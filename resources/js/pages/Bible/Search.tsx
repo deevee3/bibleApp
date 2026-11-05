@@ -111,6 +111,8 @@ export default function Search({ query, results, version, available_versions }: 
             <Head>
                 <title>{query ? `Search: ${query} | InspireWrite` : 'Search the Bible | InspireWrite'}</title>
                 <meta name="description" content="Search the full text of the Bible. Find verses by keyword or phrase." />
+                <meta name="ai-summary" content="Search the full text of the Bible. Find verses by keyword or phrase." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/bible/search.md" />
                 <meta name="robots" content="noindex, nofollow" />
             </Head>
 

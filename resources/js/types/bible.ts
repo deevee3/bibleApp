@@ -12,6 +12,7 @@ export interface Book {
     abbreviation: string;
     position: number;
     image: string | null;
+    chapters_count?: number;
 }
 
 export interface BookNav {

@@ -24,6 +24,8 @@ export default function About() {
         <BibleLayout>
             <Head title="About InspireWrite - S.C.R.I.P.T. Bible Reading & Spiritual Journaling App">
                 <meta name="description" content="Learn about InspireWrite by Glenride - the Bible reading and spiritual journaling companion featuring the denomination-neutral S.C.R.I.P.T. method." />
+                <meta name="ai-summary" content="Learn about InspireWrite by Glenride - the Bible reading and spiritual journaling companion featuring the denomination-neutral S.C.R.I.P.T. method." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/about.md" />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
 
@@ -31,7 +33,7 @@ export default function About() {
             <section className="py-20 px-6 md:px-12 bg-[#F5F2EA]">
                 <div className="max-w-4xl mx-auto">
                     <div className="flex items-center gap-4 mb-8">
-                        <h1 className="text-5xl font-bold uppercase tracking-wider" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h1 className="text-5xl font-bold uppercase tracking-wider" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             ABOUT US.
                         </h1>
                         <div className="h-px bg-black/20 flex-1" />
@@ -49,7 +51,7 @@ export default function About() {
             {/* Mission Section */}
             <section className="py-16 px-6 md:px-12 bg-white">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-2xl font-bold uppercase tracking-wider mb-6" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h2 className="text-2xl font-bold uppercase tracking-wider mb-6" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         Our <span className="text-yellow-500">Mission</span>
                     </h2>
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -65,7 +67,7 @@ export default function About() {
             <section className="py-16 px-6 md:px-12 bg-[#1a1a1a] text-white">
                 <div className="max-w-4xl mx-auto">
                     <div className="flex items-center gap-4 mb-8">
-                        <h2 className="text-2xl font-bold uppercase tracking-wider" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold uppercase tracking-wider" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             Meet the <span className="text-yellow-500">Founder</span>
                         </h2>
                         <div className="h-px bg-white/20 flex-1" />
@@ -94,7 +96,7 @@ export default function About() {
                 <div className="max-w-4xl mx-auto">
                     <div className="flex items-center gap-4 mb-8">
                         <Church className="text-yellow-500" size={28} />
-                        <h2 className="text-2xl font-bold uppercase tracking-wider" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold uppercase tracking-wider" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             Our <span className="text-yellow-500">Approach</span>
                         </h2>
                         <div className="h-px bg-black/20 flex-1" />
@@ -114,7 +116,7 @@ export default function About() {
             {/* Features Grid */}
             <section className="py-16 px-6 md:px-12 bg-[#F5F2EA]">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-2xl font-bold uppercase tracking-wider mb-8" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h2 className="text-2xl font-bold uppercase tracking-wider mb-8" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         What We <span className="text-yellow-500">Offer</span>
                     </h2>
 
@@ -146,7 +148,7 @@ export default function About() {
             {/* Contact CTA */}
             <section className="py-16 px-6 md:px-12 bg-[#1a1a1a] text-white">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         Questions? We'd Love to Hear From You
                     </h2>
                     <p className="text-gray-300 mb-8 max-w-xl mx-auto">

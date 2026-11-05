@@ -73,6 +73,8 @@ export default function JournalingPrompts() {
         <BibleLayout>
             <Head title="30 Journaling Prompts for Spiritual Growth | InspireWrite">
                 <meta name="description" content="Powerful journaling prompts to deepen your relationship with God. Reflection questions for prayer, gratitude, Scripture meditation, and personal growth." />
+                <meta name="ai-summary" content="Powerful journaling prompts to deepen your relationship with God. Reflection questions for prayer, gratitude, Scripture meditation, and personal growth." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/resources/journaling-prompts-for-spiritual-growth.md" />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
 
@@ -81,7 +83,7 @@ export default function JournalingPrompts() {
                     <div className="flex items-center gap-2 text-yellow-600 text-sm uppercase tracking-widest mb-4">
                         <PenTool size={16} /><span>Resource Guide</span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         30 Journaling Prompts for <span className="text-yellow-500">Spiritual Growth</span>
                     </h1>
                     <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
@@ -96,7 +98,7 @@ export default function JournalingPrompts() {
                         <div key={catIndex}>
                             <div className="flex items-center gap-3 mb-6">
                                 {category.icon}
-                                <h2 className="text-xl font-bold uppercase tracking-wider" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                                <h2 className="text-xl font-bold uppercase tracking-wider" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                                     {category.name}
                                 </h2>
                                 <div className="h-px bg-black/10 flex-1" />
@@ -112,7 +114,7 @@ export default function JournalingPrompts() {
                     ))}
 
                     <div className="p-8 bg-[#F5F2EA] border border-gray-200">
-                        <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>How to Use These Prompts</h3>
+                        <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>How to Use These Prompts</h3>
                         <ul className="space-y-3 text-gray-700">
                             <li><strong>1. Read Scripture first</strong> — Let God's Word prime your reflection</li>
                             <li><strong>2. Choose one prompt</strong> — Don't try to answer them all at once</li>
@@ -123,7 +125,7 @@ export default function JournalingPrompts() {
                     </div>
 
                     <div className="bg-[#1a1a1a] text-white p-10 text-center">
-                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>Start Journaling with InspireWrite</h2>
+                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>Start Journaling with InspireWrite</h2>
                         <p className="text-gray-300 mb-8">Attach notes directly to verses and build a spiritual journal over time.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/bible/ps/1" className="inline-flex items-center justify-center gap-2 bg-yellow-500 px-8 py-4 text-sm uppercase tracking-widest hover:bg-yellow-600">

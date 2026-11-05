@@ -5,7 +5,11 @@ import { Check } from 'lucide-react';
 export default function Pricing() {
     return (
         <BibleLayout>
-            <Head title="Pricing" />
+            <Head title="Pricing">
+                <meta name="description" content="Simple, transparent pricing. Free, Study at $7/mo, and Pro at $27/mo. Choose the plan that fits your spiritual journey." />
+                <meta name="ai-summary" content="Simple, transparent pricing. Free, Study at $7/mo, and Pro at $27/mo. Choose the plan that fits your spiritual journey." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/pricing.md" />
+            </Head>
             <div className="py-16 px-4 md:px-12 max-w-5xl mx-auto">
                 <div className="text-center mb-16">
                     <h1 className="font-serif text-4xl mb-4">Simple, Transparent Pricing</h1>

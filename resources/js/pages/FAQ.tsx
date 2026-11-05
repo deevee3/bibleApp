@@ -91,6 +91,14 @@ export default function FAQ() {
                     answer: "The S.C.R.I.P.T. method is InspireWrite's denomination-neutral guided inquiry flow for deeper Bible reading. S.C.R.I.P.T. stands for Set the Scene, Capture What It Says, Relate to the Rest of Scripture, Interpret the Meaning, Put It Into Practice, and Talk to God. Premium users can enable S.C.R.I.P.T. Inquiry Mode directly in the chapter reader for step-by-step reflection prompts."
                 },
                 {
+                    question: "How many Bible translations does InspireWrite provide?",
+                    answer: "InspireWrite serves 2 Bible translations live: King James Version (31,100 verses) and Bible in Basic English (31,104 verses). That is 2 of 19 translation files vendored in 14 languages (2/19). Every vendored file holds 66 books and 1,189 chapters; the other files are not yet imported and cannot be read on the site today. See the Bible coverage research page (https://inspirewrite.online/research/bible-coverage) for the counted breakdown and methodology."
+                },
+                {
+                    question: "What does the Bible coverage research page show?",
+                    answer: "It shows counted Bible coverage statistics for InspireWrite, recomputed from the vendored translation files: 19 translation files in 14 languages, a median of 31,101 verses per translation, and 2 translations served live. Every finding states its denominator and links to its methodology. See Bible Coverage Statistics 2026 (https://inspirewrite.online/research/bible-coverage)."
+                },
+                {
                     question: "How do I create and organize notes?",
                     answer: "Notes in InspireWrite are attached directly to verses, making them easy to find later. Click on any verse and select the note icon to add your reflection. Notes are saved in your dashboard under the highlights section. You can write prayers, record insights, track questions, or document how God is speaking to you. This creates a personal spiritual journal tied directly to Scripture."
                 }
@@ -158,6 +166,8 @@ export default function FAQ() {
         <BibleLayout>
             <Head title="FAQ - Frequently Asked Questions | InspireWrite">
                 <meta name="description" content="Find answers to common questions about InspireWrite. Learn how to read the Bible, study with the Assistant, manage your subscription, and grow spiritually." />
+                <meta name="ai-summary" content="Find answers to common questions about InspireWrite. Learn how to read the Bible, study with the Assistant, manage your subscription, and grow spiritually." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/faq.md" />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             </Head>
 
@@ -165,7 +175,7 @@ export default function FAQ() {
             <section className="py-20 px-6 md:px-12 bg-[#F5F2EA]">
                 <div className="max-w-4xl mx-auto">
                     <div className="flex items-center gap-4 mb-8">
-                        <h1 className="text-5xl font-bold uppercase tracking-wider" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h1 className="text-5xl font-bold uppercase tracking-wider" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             FAQ.
                         </h1>
                         <div className="h-px bg-black/20 flex-1" />
@@ -184,7 +194,7 @@ export default function FAQ() {
                         <div key={catIndex}>
                             <div className="flex items-center gap-3 mb-6">
                                 {category.icon}
-                                <h2 className="text-xl font-bold uppercase tracking-wider" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                                <h2 className="text-xl font-bold uppercase tracking-wider" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                                     {category.name}
                                 </h2>
                                 <div className="h-px bg-black/10 flex-1" />
@@ -198,6 +208,7 @@ export default function FAQ() {
                                     return (
                                         <div
                                             key={itemIndex}
+                                            id={`faq-${catIndex}-${itemIndex}`}
                                             className="border border-gray-100 bg-[#F5F2EA]/30 hover:border-yellow-500/30 transition-colors"
                                         >
                                             <button
@@ -215,6 +226,11 @@ export default function FAQ() {
                                             {isOpen && (
                                                 <div className="px-6 pb-6">
                                                     <p className="text-gray-700 leading-relaxed">{item.answer}</p>
+                                                    <p className="text-sm mt-3">
+                                                        <a href={`#faq-${catIndex}-${itemIndex}`} className="text-yellow-600 hover:underline">
+                                                            Link to this answer
+                                                        </a>
+                                                    </p>
                                                 </div>
                                             )}
                                         </div>
@@ -230,7 +246,7 @@ export default function FAQ() {
             <section className="py-16 px-6 md:px-12 bg-[#1a1a1a] text-white">
                 <div className="max-w-4xl mx-auto text-center">
                     <HelpCircle className="mx-auto mb-4 text-yellow-500" size={48} />
-                    <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         Still Have Questions?
                     </h2>
                     <p className="text-gray-300 mb-8 max-w-xl mx-auto">

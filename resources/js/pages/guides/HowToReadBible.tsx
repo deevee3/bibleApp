@@ -25,6 +25,8 @@ export default function HowToReadBible() {
         <BibleLayout>
             <Head title="How to Read the Bible: A Complete Guide | InspireWrite">
                 <meta name="description" content="Learn how to start reading the Bible effectively. Practical tips for developing a consistent Bible reading habit, understanding Scripture, and growing spiritually." />
+                <meta name="ai-summary" content="Learn how to start reading the Bible effectively. Practical tips for developing a consistent Bible reading habit, understanding Scripture, and growing spiritually." />
+                <link rel="alternate" type="text/markdown" href="https://inspirewrite.online/guides/how-to-read-the-bible.md" />
                 <meta name="keywords" content="how to read Bible, Bible reading guide, start reading Bible, Bible for beginners, Bible study tips" />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
             </Head>
@@ -36,7 +38,7 @@ export default function HowToReadBible() {
                         <BookOpen size={16} />
                         <span>Spiritual Guide</span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                         How to Read the Bible: A Complete <span className="text-yellow-500">Guide</span>
                     </h1>
                     <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
@@ -77,7 +79,7 @@ export default function HowToReadBible() {
 
                     {/* Section 1 */}
                     <div className="mb-16">
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center text-lg font-bold">1</span>
                             Where Should I Start Reading?
                         </h2>
@@ -105,7 +107,7 @@ export default function HowToReadBible() {
 
                     {/* Section 2 */}
                     <div className="mb-16">
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center text-lg font-bold">2</span>
                             How Often Should I Read?
                         </h2>
@@ -143,7 +145,7 @@ export default function HowToReadBible() {
 
                     {/* Section 3 */}
                     <div className="mb-16">
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center text-lg font-bold">3</span>
                             What If I Don't Understand Something?
                         </h2>
@@ -162,7 +164,7 @@ export default function HowToReadBible() {
 
                             <div className="bg-[#1a1a1a] text-white p-6 my-6">
                                 <Quote className="text-yellow-500 mb-3" size={28} />
-                                <p className="italic text-lg" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                                <p className="italic text-lg" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                                     "The Bible is shallow enough for a child to wade in, yet deep enough for an elephant to drown."
                                 </p>
                                 <p className="text-gray-400 text-sm mt-2">— Often attributed to various theologians</p>
@@ -172,7 +174,7 @@ export default function HowToReadBible() {
 
                     {/* Section 4 */}
                     <div className="mb-16">
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center text-lg font-bold">4</span>
                             How Do I Get More from My Reading?
                         </h2>
@@ -212,7 +214,7 @@ export default function HowToReadBible() {
 
                     {/* Section 5 */}
                     <div className="mb-16">
-                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             <span className="w-10 h-10 bg-yellow-500 text-white flex items-center justify-center text-lg font-bold">5</span>
                             What If I Fall Behind or Miss Days?
                         </h2>
@@ -237,7 +239,7 @@ export default function HowToReadBible() {
 
                     {/* Call to Action */}
                     <div className="bg-[#1a1a1a] text-white p-10 text-center">
-                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'DM Serif Display, serif' }}>
+                        <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Cormorant Garamond, DM Serif Display, serif' }}>
                             Ready to Start?
                         </h2>
                         <p className="text-gray-300 mb-8 max-w-lg mx-auto">

@@ -385,6 +385,16 @@ export default function Chapter({ book, chapter, verses, version, available_vers
             <Head>
                 <title>{`${book.name} ${chapter.number} (${versionLabel}) — Read the Bible Online | InspireWrite`}</title>
                 <meta name="description" content={metaDescription} />
+                <meta name="ai-summary" content={metaDescription} />
+                <link
+                    rel="alternate"
+                    type="text/markdown"
+                    href={
+                        version.slug === 'kjv'
+                            ? `https://inspirewrite.online/bible/${book.abbreviation}/${chapter.number}.md`
+                            : `https://inspirewrite.online/bible/${version.slug}/${book.abbreviation}/${chapter.number}.md`
+                    }
+                />
                 <meta property="og:title" content={`${book.name} ${chapter.number} (${versionLabel}) — InspireWrite`} />
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:type" content="article" />
@@ -677,6 +687,14 @@ export default function Chapter({ book, chapter, verses, version, available_vers
                         <div className="w-20"></div>
                     )}
                 </div>
+
+                {/* At a glance — facts from this chapter's record */}
+                <dl className="max-w-[68ch] mx-auto mb-8 grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                    <div className="bg-[#F5F2EA] dark:bg-card p-3"><dt className="text-xs uppercase tracking-widest text-muted-foreground">Book</dt><dd className="font-semibold">{book.name}</dd></div>
+                    <div className="bg-[#F5F2EA] dark:bg-card p-3"><dt className="text-xs uppercase tracking-widest text-muted-foreground">Chapter</dt><dd className="font-semibold">{chapter.number} of {total_chapters}</dd></div>
+                    <div className="bg-[#F5F2EA] dark:bg-card p-3"><dt className="text-xs uppercase tracking-widest text-muted-foreground">Verses</dt><dd className="font-semibold">{verses.length}</dd></div>
+                    <div className="bg-[#F5F2EA] dark:bg-card p-3"><dt className="text-xs uppercase tracking-widest text-muted-foreground">Translation</dt><dd className="font-semibold">{version.name} ({versionLabel})</dd></div>
+                </dl>
 
                 {/* Verses — grouped into readable paragraph blocks with comfortable line measure */}
                 <div
